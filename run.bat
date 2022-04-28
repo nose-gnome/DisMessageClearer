@@ -1,2 +1,2 @@
-./venv/bin/activate.bat
-python3 ./
+.\venv\bin\activate.bat
+python3 .\
