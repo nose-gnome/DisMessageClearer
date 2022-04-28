@@ -15,7 +15,7 @@ async def auto_clear():
 
     while True:
         msg = []
-        time = datetime.utcnow() - timedelta(hours=environ['HOURS'], minutes=environ['MINUTES'], days=environ['DAYS'])
+        time = datetime.utcnow() - timedelta(hours=int(environ['HOURS']), minutes=int(environ['MINUTES']), days=int(environ['DAYS']))
         await channel.purge(before=time)
         await asleep(int(environ['REFRESH']))
 
