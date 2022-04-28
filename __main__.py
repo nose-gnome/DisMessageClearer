@@ -9,6 +9,7 @@ load_dotenv()
 # Press the green button in the gutter to run the script.
 client = Client()
 
+
 async def auto_clear():
     channel = client.get_channel(int(environ['CHANNEL']))
 
@@ -16,7 +17,7 @@ async def auto_clear():
         msg = []
         time = datetime.utcnow() - timedelta(hours=1)
         await channel.purge(before=time)
-        await asleep(environ['REFRESH'])
+        await asleep(int(environ['REFRESH']))
 
 @client.event
 async def on_ready():
