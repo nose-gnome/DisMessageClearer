@@ -16,7 +16,7 @@ async def auto_clear():
         msg = []
         time = datetime.utcnow() - timedelta(hours=1)
         await channel.purge(before=time)
-        await asleep(60)
+        await asleep(environ['REFRESH'])
 
 @client.event
 async def on_ready():
