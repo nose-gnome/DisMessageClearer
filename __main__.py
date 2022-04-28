@@ -1,7 +1,10 @@
 from os import environ
+from dotenv import load_dotenv
 from discord import Client
 from datetime import datetime, timedelta, timezone
 from  asyncio import sleep as asleep
+
+load_dotenv()
 
 # Press the green button in the gutter to run the script.
 client = Client()
