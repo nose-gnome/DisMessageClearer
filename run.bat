@@ -1,2 +1,1 @@
-.\venv\Scripts\activate.bat
-python3 .\
+\venv\Scripts\python .\
